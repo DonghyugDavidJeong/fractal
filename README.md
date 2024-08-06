@@ -1,0 +1,1 @@
+Sierpinski Triangle made by Donghyug David Jeong for COMP3710, using PyTorch
