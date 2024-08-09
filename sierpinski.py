@@ -24,16 +24,11 @@ match start_vertex:
     case 2:
         start_position = (x + y)/2
 
-print(start_vertex)
-print(start_position)
+start_position = start_position.to(device)
 
-print(X, Y, Z)
-print(x, y, z)
 plt.plot(x[0], x[1], 'ro')
 plt.plot(y[0], y[1], 'go')
 plt.plot(z[0], z[1], 'bo')
-# plt.plot(y)
-# plt.plot(z)
 
 for i in range(20000):
     match start_vertex:
@@ -44,7 +39,6 @@ for i in range(20000):
         case 2:
             start_position = (start_position + z)/2
     start_vertex = np.random.randint(3)
-    start_position = start_position.to(device)
-    plt.plot(start_position[0], start_position[1], 'bo')
+    plt.plot(start_position[0], start_position[1], 'co')
 plt.tight_layout(pad=0)
 plt.show()
